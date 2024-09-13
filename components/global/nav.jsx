@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { ThemeToggle } from "../../components/theme-toggle";
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { Label } from "@/components/ui/label";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+import { Label } from "../../components/ui/label";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/ui/accordion";
+import { Button } from "../../components/ui/button";
 import { PenTool, BookOpenText, AudioLines, MicVocal, House, Settings, LogOut, StickyNote } from 'lucide-react';
 
 // Menu items pour la sidebar

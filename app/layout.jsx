@@ -1,12 +1,12 @@
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "../components/theme-provider";
 import styles from "../page.module.css";
 
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 
-import { cn } from "@/lib/utils";
-import Nav from "@/components/global/nav";
-import Footer from "@/components/global/footer";
+import { cn } from "../lib/utils";
+import Nav from "../components/global/nav";
+import Footer from "../components/global/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],

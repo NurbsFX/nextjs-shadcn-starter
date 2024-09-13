@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useTheme } from "next-themes";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 import { RiMoonClearLine, RiSunLine } from "react-icons/ri";
 
 export function ThemeToggle() {

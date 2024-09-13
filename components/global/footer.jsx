@@ -2,7 +2,7 @@
 import { TbCoffee } from "react-icons/tb";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-import { Label } from "@/components/ui/label";
+import { Label } from "../../components/ui/label";
 
 const footerLinks = [
   {
