@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
+import styles from "../page.module.css";
 
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
@@ -33,11 +34,18 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <Nav />
-          {children}
-          <Footer />
+          <div className={styles.container}>
+            <div className={styles.menu}>
+              <Nav />
+            </div>
+            <div className={styles.content}>
+              {children}
+              <Footer />
+            </div>
+          </div>
+
         </ThemeProvider>
       </body>
-    </html>
+    </html >
   );
 }

@@ -18,7 +18,7 @@ export function ThemeToggle() {
       {theme === "dark" ? (
         <RiSunLine className="text-lg" />
       ) : (
-        <RiMoonClearLine className="text-lg" />
+        <RiMoonClearLine className="text-lg text-black" />
       )}
     </Button>
   );
