@@ -7,21 +7,14 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Label } from "@/components/ui/label";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { FaRegNoteSticky } from "react-icons/fa6";
-import { RiSpeakLine } from "react-icons/ri";
-import { IoEarOutline } from "react-icons/io5";
-import { BsHouse } from "react-icons/bs";
-import { TbWritingSign } from "react-icons/tb";
-import { GoBook } from "react-icons/go";
-import { TbSettings } from "react-icons/tb";
 import { Button } from "@/components/ui/button";
-import { TbLogout2 } from "react-icons/tb";
+import { PenTool, BookOpenText, AudioLines, MicVocal, House, Settings, LogOut, StickyNote } from 'lucide-react';
 
 // Menu items pour la sidebar
 const menuItems = [
   {
     title: "Reading",
-    icon: <GoBook />,
+    icon: <BookOpenText className="size-5" />,
     list: [
       { title: "Analytics", path: "/reading/analytics" },
       { title: "Training", path: "/reading/training" },
@@ -29,7 +22,7 @@ const menuItems = [
   },
   {
     title: "Listening",
-    icon: <IoEarOutline />,
+    icon: <AudioLines className="size-5" />,
     list: [
       { title: "Analytics", path: "/listening/analytics" },
       { title: "Training", path: "/listening/training" },
@@ -37,7 +30,7 @@ const menuItems = [
   },
   {
     title: "Writing",
-    icon: <TbWritingSign />,
+    icon: <PenTool className="size-5" />,
     list: [
       { title: "Analytics", path: "/writing/analytics" },
       { title: "Training", path: "/writing/training" },
@@ -45,7 +38,7 @@ const menuItems = [
   },
   {
     title: "Speaking",
-    icon: <RiSpeakLine />,
+    icon: <MicVocal className="size-5" />,
     list: [
       { title: "Analytics", path: "/speaking/analytics" },
       { title: "Training", path: "/speaking/training" },
@@ -53,7 +46,7 @@ const menuItems = [
   },
   {
     title: "Exams Tests",
-    icon: <FaRegNoteSticky />,
+    icon: <StickyNote className="size-5" />,
     list: [
       { title: "Analytics", path: "/exams/analytics" },
       { title: "Training", path: "/exams/training" },
@@ -88,7 +81,7 @@ export default function Sidebar() {
           </Link>
           <div className="mb-4 flex items-center gap-3 text-gray-800 dark:text-gray-100">
             <div className="text-xl">
-              <BsHouse />
+              <House className="size-5" />
             </div>
             <Label className="text-lg font-semibold">Home</Label>
           </div>
@@ -96,8 +89,8 @@ export default function Sidebar() {
           <Accordion type="single" collapsible className="w-full">
             {menuItems.map((category) => (
               <AccordionItem key={category.title} value={category.title}>
-                <AccordionTrigger className="flex items-center gap-3 text-gray-800 dark:text-gray-100 justify-left">
-                  {category.icon && <div className="text-xl">{category.icon}</div>}
+                <AccordionTrigger className="flex items-center gap-2 text-gray-800 dark:text-gray-100 justify-left">
+                  {category.icon && <div >{category.icon}</div>}
                   <Label className="text-lg font-semibold">{category.title}</Label>
                 </AccordionTrigger>
                 <AccordionContent>
@@ -116,14 +109,14 @@ export default function Sidebar() {
           </Accordion>
           <div className="mt-8 flex items-center gap-3 text-gray-800 dark:text-gray-100">
             <div className="text-xl">
-              <TbSettings />
+              <Settings className="size-5" />
             </div>
             <Label className="text-lg font-semibold">Settings</Label>
           </div>
 
           <div className="mt-auto w-full mb-auto">
             <Button className="items-center gap-3">
-              <TbLogout2 className="text-xl" />
+              <LogOut className="size-4" />
               Log out
             </Button>
           </div>
