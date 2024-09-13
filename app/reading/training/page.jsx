@@ -8,7 +8,7 @@ const ReadingTrainingPage = () => {
         <div className="max-w-4xl mx-auto p-6">
             {/* Header Section */}
             <header className="text-center mb-12 space-y-4">
-                <Label className="text-4xl font-extrabold">
+                <Label className="text-4xl font-bold">
                     Reading Section Training
                 </Label>
                 <br />
